@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/alquranFragment">
+
+    <fragment
+        android:id="@+id/alquranFragment"
+        android:name="id.gorgom.quranapp.presentation.alquran.AlquranFragment"
+        tools:layout="@layout/fragment_alquran">
+        <action
+            android:id="@+id/action_alquranFragment_to_detailAlquranFragment"
+            app:destination="@id/detailAlquranFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailAlquranFragment"
+        android:name="id.gorgom.quranapp.presentation.alquran.detailalquran.DetailAlquranFragment"
+        tools:layout="@layout/fragment_detail_alquran"/>
+</navigation>
